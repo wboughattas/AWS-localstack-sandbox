@@ -1,0 +1,16 @@
+{
+  "Records": [{
+    "kinesis": {
+      "KinesisSchemaVersion": "1.0",
+      "partitionKey": "1",
+      "sequenceNumber": "123",
+      "data": "aGkx"
+    },
+    "eventSource": "aws.kinesis",
+    "eventVersion": "1.0",
+    "eventID": "shardID-01",
+    "eventName": "aws:kinesis:record",
+    "invokeIdentityArn": "arn:aws",
+    "awsRegion": "us-east-1"
+  }]
+}
