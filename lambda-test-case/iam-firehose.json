@@ -1,0 +1,17 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "firehose:DeleteDeliveryStream",
+                "firehose:PutRecord",
+                "firehose:PutRecordBatch",
+                "firehose:UpdateDestination"
+            ],
+            "Resource": [
+                "arn:aws:firehose:us-east-1:test:deliverystream/delivery-test"
+            ]
+        }
+    ]
+}
