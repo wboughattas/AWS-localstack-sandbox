@@ -22,17 +22,17 @@ def main():
     logging.info('Starting PutRecord Producer')
 
     service_name = 'kinesis'
-    region_name = 'us-east-1'
-    endpoint_url = 'http://localhost:4566/'
-    aws_access_key_id = 'test'
-    aws_secret_access_key = 'test'
-    StreamName = 'test'
+    region_name = 'ca-central-1'
+    # endpoint_url = 'http://localhost:4566/'
+    # aws_access_key_id = 'test'
+    # aws_secret_access_key = 'test'
+    StreamName = 'test-bg'
 
     kinesis = boto3.client(service_name=service_name,
                            region_name=region_name,
-                           endpoint_url=endpoint_url,
-                           aws_access_key_id=aws_access_key_id,
-                           aws_secret_access_key=aws_secret_access_key
+                           # endpoint_url=endpoint_url,
+                           # aws_access_key_id=aws_access_key_id,
+                           # aws_secret_access_key=aws_secret_access_key
                            )
 
     # list for batching up order records to be sent to Kinesis via PutRecords API
@@ -78,7 +78,7 @@ def main():
 
             # introduce artificial delay for demonstration and
             # visual tracking of logging
-            time.sleep(0.3)
+            time.sleep(10)
 
 
 if __name__ == '__main__':

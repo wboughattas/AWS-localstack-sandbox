@@ -1,0 +1,19 @@
+{
+  "DeliveryStreamName": "delivery-test-bg",
+  "DeliveryStreamType": "KinesisStreamAsSource",
+  "KinesisStreamSourceConfiguration": {
+    "KinesisStreamARN": "arn:aws:kinesis:ca-central-1:262136867447:stream/stream-test-bg",
+    "RoleARN": "arn:aws:iam::262136867447:role/iam-testcase-bg"
+  },
+  "ExtendedS3DestinationConfiguration": {
+    "BucketARN": "arn:aws:s3:::s3-test-bg",
+    "RoleARN": "arn:aws:iam::262136867447:role/iam-testcase-bg",
+    "BufferingHints": {
+      "IntervalInSeconds": 60,
+      "SizeInMBs": 1
+    },
+    "CompressionFormat": "UNCOMPRESSED",
+    "ErrorOutputPrefix": "raw-orders-error/",
+    "Prefix": "raw-orders/"
+  }
+}
